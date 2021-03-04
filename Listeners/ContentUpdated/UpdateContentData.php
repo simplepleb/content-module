@@ -20,7 +20,7 @@
  *
  */
 
-namespace Modules\Content\Listeners\PostUpdated;
+namespace Modules\Content\Listeners\ContentUpdated;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Log;
