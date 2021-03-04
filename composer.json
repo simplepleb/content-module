@@ -1,0 +1,29 @@
+{
+    "name": "simplepleb/content-module",
+    "description": "Content module with Pages, Advertisements.",
+    "type": "laravel-module",
+    "version": "v1.0",
+    "license": ["GPL-3.0-or-later"],
+    "authors": [
+        {
+            "name": "SimplePleb",
+            "email": "plebeian.tribune@protonmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Content\\Providers\\ContentServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Content\\": ""
+        }
+    },
+    "minimum-stability": "dev"
+}

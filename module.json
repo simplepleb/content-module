@@ -1,0 +1,14 @@
+{
+    "name": "Content",
+    "alias": "article",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Content\\Providers\\ContentServiceProvider",
+        "Modules\\Content\\Providers\\EventServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
