@@ -30,10 +30,10 @@ class EventServiceProvider extends ServiceProvider
         'Modules\Content\Events\ContentCreated' => [
             'Modules\Content\Listeners\ContentCreated\CreateContentData',
         ],
-        'Modules\Content\Events\PostUpdated' => [
+        'Modules\Content\Events\ContentUpdated' => [
             'Modules\Content\Listeners\ContentUpdated\UpdateContentData',
         ],
-        'Modules\Content\Events\PostViewed' => [
+        'Modules\Content\Events\ContentViewed' => [
             'Modules\Content\Listeners\ContentViewed\IncrementHitCount',
         ],
     ];
