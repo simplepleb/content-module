@@ -20,7 +20,7 @@
  *
  */
 
-namespace Modules\Content\Listeners\PostViewed;
+namespace Modules\Content\Listeners\ContentViewed;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Log;
