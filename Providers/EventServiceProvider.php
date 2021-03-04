@@ -27,7 +27,7 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 class EventServiceProvider extends ServiceProvider
 {
     protected $listen = [
-        'Modules\Content\Events\PostCreated' => [
+        'Modules\Content\Events\ContentCreated' => [
             'Modules\Content\Listeners\ContentCreated\CreateContentData',
         ],
         'Modules\Content\Events\PostUpdated' => [
