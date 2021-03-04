@@ -48,7 +48,7 @@ class ContentsController extends Controller
     public function __construct()
     {
         // Page Title
-        $this->module_title = 'Posts';
+        $this->module_title = 'Contents';
 
         // module name
         $this->module_name = 'contents';
@@ -60,7 +60,7 @@ class ContentsController extends Controller
         $this->module_icon = 'fas fa-file-alt';
 
         // module model name, path
-        $this->module_model = "Modules\Content\Entities\Post";
+        $this->module_model = "Modules\Content\Entities\Content";
     }
 
     /**

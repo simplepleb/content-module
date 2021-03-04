@@ -56,7 +56,7 @@ class GenerateMenus
             ]);
 
             // Submenu: Posts
-            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Posts', [
+            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Pages', [
                 'route' => 'backend.contents.index',
                 'class' => 'c-sidebar-nav-item',
             ])
