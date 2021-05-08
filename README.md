@@ -3,7 +3,7 @@
 
 # Content Management Module 
 
-Content Builder For Laravel CMS
+Content Builder For Laravel CMS. MIT license, live support and premium versions available at XSCode
 
 
 [![Foo](https://xscode.com/assets/promo-banner.svg)](https://xscode.com/simplepleb/content-module)
