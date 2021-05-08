@@ -22,7 +22,6 @@
         "simplepleb/thememanager-module": "Manage themes for front-facing and admin panels",
         "simplepleb/article-module": "Complete article post and category module",
         "simplepleb/comment-module": "Add comments to site content",
-        "simplepleb/content-module": "Manage site content and front-facing pages",
         "simplepleb/tag-module": "Add tags and taggables to content",
         "simplepleb/themes": "A library of starter themes for your laravel project"
     },
