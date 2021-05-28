@@ -14,7 +14,7 @@
  * @website https://www.simple-pleb.com
  * @source https://github.com/simplepleb/content-module
  *
- * @license Free to do as you please
+ * @license MIT For Premium Clients
  *
  * @since 1.0
  *
@@ -25,6 +25,8 @@ namespace Modules\Content\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
+use Modules\Thememanager\Entities\SiteTheme;
+use Theme;
 
 class CategoriesController extends Controller
 {
@@ -98,6 +100,34 @@ class CategoriesController extends Controller
             $contents = $$module_name_singular->contents()->with('category')->paginate();
         }
 
+
+        if( \Module::has('Thememanager')) {
+            $view_file = 'content_list';
+
+            $theme = SiteTheme::where('active', 1)->first();
+            // dd( $theme );
+            if( $theme ) {
+
+                if(!empty($theme->page_styles)) {
+                    // dd( $theme->page_styles );
+                    $page_types = json_decode($theme->page_styles);
+                    // dd( $page_types );
+                    $blade_file = isset($page_types->posts) ? $page_types->posts : 'posts';
+                    $blade_path = public_path('themes/'.$theme->slug.'/views/'.$blade_file.'.blade.php');
+                   //  dd( $blade_path );
+                    if( file_exists($blade_path)) {
+                        $view_file = $blade_file;
+
+                        Theme::uses($theme->slug); // oreo, huckbee
+
+                        return Theme::view($view_file, compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular"));
+                    }
+
+
+                }
+            }
+
+        }
 
         return view(
             "content::frontend.$module_name.show",

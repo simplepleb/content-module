@@ -14,7 +14,7 @@
  * @website https://www.simple-pleb.com
  * @source https://github.com/simplepleb/content-module
  *
- * @license Free to do as you please
+ * @license MIT For Premium Clients
  *
  * @since 1.0
  *
@@ -39,11 +39,11 @@ class GenerateMenus
         \Menu::make('admin_sidebar', function ($menu) {
 
             // Contents Dropdown
-            $articles_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Content', [
+            $articles_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-envelope-open-text"></i> Content', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
-                'order'         => 81,
+                'order'         => 87,
                 'activematches' => [
                     'admin/contents*',
                     'admin/categories*',
@@ -56,31 +56,19 @@ class GenerateMenus
             ]);
 
             // Submenu: Posts
-            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Pages', [
+            $articles_menu->add('Pages', [
                 'route' => 'backend.contents.index',
                 'class' => 'c-sidebar-nav-item',
             ])
             ->data([
-                'order'         => 82,
+                'order'         => 88,
                 'activematches' => 'admin/contents*',
                 'permission'    => ['edit_posts'],
             ])
             ->link->attr([
                 'class' => "c-sidebar-nav-link",
             ]);
-            // Submenu: Categories
-            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-sitemap"></i> Categories', [
-                'route' => 'backend.categories.index',
-                'class' => 'c-sidebar-nav-item',
-            ])
-            ->data([
-                'order'         => 83,
-                'activematches' => 'admin/categories*',
-                'permission'    => ['edit_categories'],
-            ])
-            ->link->attr([
-                'class' => "c-sidebar-nav-link",
-            ]);
+
         })->sortBy('order');
 
         return $next($request);

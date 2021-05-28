@@ -14,7 +14,7 @@
  * @website https://www.simple-pleb.com
  * @source https://github.com/simplepleb/content-module
  *
- * @license Free to do as you please
+ * @license MIT For Premium Clients
  *
  * @since 1.0
  *
@@ -99,8 +99,8 @@ class ContentsController extends Controller
         event(new ContentViewed($$module_name_singular));
         $view_file = 'show';
 
-        if( \Module::has('ThemeManager')) {
-            $view_file = 'blank';
+        if( \Module::has('Thememanager')) {
+            $view_file = 'page';
 
             $theme = SiteTheme::where('active', 1)->first();
             // dd( $theme );
@@ -112,10 +112,7 @@ class ContentsController extends Controller
                     // dd( $page_types );
                     $view_file = $page_types->page;
 
-                    Theme::uses('digincy'); // oreo, huckbee
-
-
-                    $data['info'] = 'Hello World';
+                    Theme::uses($theme->slug); // oreo, huckbee
 
                     return Theme::view($view_file, compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'meta_page_type'));
                 }

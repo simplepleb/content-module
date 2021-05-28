@@ -14,7 +14,7 @@
  * @website https://www.simple-pleb.com
  * @source https://github.com/simplepleb/content-module
  *
- * @license Free to do as you please
+ * @license MIT For Premium Clients
  *
  * @since 1.0
  *
@@ -110,7 +110,7 @@ class CategoriesController extends Controller
         $$module_name = [];
 
         foreach ($query_data as $row) {
-            $$module_name[] = [
+            ${$module_name}[] = [
                 'id'   => $row->id,
                 'text' => $row->name.' (Slug: '.$row->slug.')',
             ];

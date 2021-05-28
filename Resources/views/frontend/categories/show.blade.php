@@ -53,7 +53,7 @@
 
         </div>
         <div class="d-flex justify-content-center w-100 mt-3">
-            {{$content->links()}}
+           {{-- {{$content->links()}}--}}
         </div>
     </div>
 </section>
